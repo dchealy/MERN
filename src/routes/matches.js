@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const createPlayer = require('../controllers/player')
 
 // GET all matches
 router.get('/', (req, res) => { 
@@ -13,6 +14,7 @@ router.get('/:id', (req, res) => {
 
 // POST a new match
 router.post('/', (req, res) => {
+
   res.json({msg: 'Post a new match'});
 });
 
