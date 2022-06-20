@@ -1,19 +1,19 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const playerSchema = new Schema({
-  firstName: {
+const workoutSchema = new Schema({
+  title: {
     type: String,
     required: true
   },
-  lastName: {
-    type: String,
-    required: true
-  },
-  skillRank: {
+  reps: {
     type: Number,
     required: true
   },
-});
+  load: {
+    type: Number,
+    required: true
+  }
+}, { timestamps: true });
 
-module.exports = mongoose.model('Player', playerSchema);
+module.exports = mongoose.model('Workout', workoutSchema);
